@@ -17,7 +17,7 @@ type Transaction interface {
 	GetTotalAmountInCents() uint // GetTotalAmountInCents returns the total amount spent in the transaction, in cents.
 	GetTransactionCostInCents() uint // GetTransactionCostInCents returns the transaction processing cost in cents.
 	GetScanLog() string //GetScanLog fetches the image of the scan that authorized transaction
-	GetTransactionDeviceIMEI() (string, error) //GetTransactionDeviceIMEI returns the IMEI device ID of the device that processed the transaction 
+	GetTransactionDeviceID() (string, error) //GetTransactionDeviceID returns the device ID of the device that processed the transaction 
 	GetTransactionDeviceModel() *string //GetTransactionDeviceModel returns the model of the device that processed the transaction
 }
 
