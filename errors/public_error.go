@@ -106,7 +106,7 @@ const (
 	// Offline Transaction ID Validation Scenarios
 	// ==========================================
 	EARValidationInvalidOfflineTxId SystemCode = "EAR-058"
-	EARValidationInvalidIMEI        SystemCode = "EAR-059"
+	EARValidationInvalidDeviceID        SystemCode = "EAR-059"
 	EARValidationInvalidUnixTimestamp   SystemCode = "EAR-060"
 )
 
@@ -381,9 +381,9 @@ var registry = map[SystemCode]errorDefinition{
 		HttpStatus: http.StatusBadRequest,
 		Message:    "The offline transaction ID format is invalid. Expected format: 'IMEI_MillisecondTimestamp'.",
 	},
-	EARValidationInvalidIMEI: {
+	EARValidationInvalidDeviceID: {
 		HttpStatus: http.StatusBadRequest,
-		Message:    "The device IMEI in the offline transaction ID is invalid or failed the Luhn checksum.",
+		Message:    "The device ID in the offline transaction ID is invalid.",
 	},
 	EARValidationInvalidUnixTimestamp: {
 		HttpStatus: http.StatusBadRequest,
